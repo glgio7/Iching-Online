@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/img/ying_yang.svg">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>iChing Online - Início</title>
+</head>
+
+<body>
+  <header>
+    <h2>易</h2>
+    <h1>iChing</h1>
+    <h2>經</h2>
+  </header>
+  <nav>
+    <ul>
+      <a href="./index.html">
+        <li>Página Inicial</li>
+      </a><a href="https://google.com" target="_blank">
+      <li>Recomendações de leitura</li></a>
+      <a href="https://google.com" target="_blank">
+        <li>Sobre o iChing</li>
+      </a>
+      <a href="./hexagramas.html">
+        <li>Hexagramas</li>
+      </a>
+    </ul>
+  </nav>
+  <div class="master-container">
+    <div class="container">
+      <h3>Instruções</h3>
+      <div class="text-box">
+        <h3>Como jogar</h3>
+        <p>Para formar um hexagrama são necessárias 6 jogadas. Para cada combinação de moedas tiradas, selecione
+          recolher e jogue novamente.</p>
+        <h3>Como funciona</h3>
+        <h4>1 moeda Yin + 2 moedas Yang</h4>
+        <p> linha yin em repouso, valor 8.</p>
+        <h4>——————— ———————</h4>
+        <h4>2 moeda Yin + 1 moeda Yang</h4>
+        <p>linha yang em repouso, valor 7.</p>
+        <h4>———————————————</h4>
+        <h4>3 moedas Yin</h4>
+        <p>linha yin móvel, valor 6.</p>
+        <h4>———————x———————</h4>
+        <h4>3 moedas Yang</h4>
+        <p>linha yang móvel, valor 9.</p>
+        <h4>———————o———————</h4>
+        <p>Para saber mais, acesse a sessão "sobre o iChing" no menu de navegação.</p>
+      </div>
+    </div>
+    <div class="container">
+      <h3>Tire suas moedas</h3>
+      <ul class="roll" id="box">
+        <li id="roll-item"><img src="./img/cara.png" class="moedas" id="mm-1" /><span id="m-um"></span></li>
+        <li id="roll-item"><img src="./img/cara.png" class="moedas" id="mm-2" /><span id="m-dois"></span></li>
+        <li id="roll-item"><img src="./img/cara.png" class="moedas" id="mm-3" /><span id="m-tres"></span></li>
+      </ul>
+      <p>Mantenha em mente o assunto para o qual deseja obter orientação.
+        A primeira jogada revela a linha inferior do hexagrama; a segunda
+        jogada indica a segunda linha de baixo para cima e, assim por diante, até a sexta e última jogada, que indica
+        a última linha superior.</p>
+      <div class="actions">
+        <button onclick="jogar()">Jogar</button>
+        <button onclick="recolher()">Recolher</button>
+      </div>
+    </div>
+    <div class="container">
+      <h3>Resultado</h3>
+      <div class="text-box">
+        <h4>Linha Atual</h4>
+        <p id="linha"></p>
+        <p>Dica: Tire print ou anote as linhas de valor 6 e 9.</p>
+        <h4>Hexagrama</h4>
+        <h3 id="pesquisar"></h3>
+        <button class="copiar" id="copiar" onclick="copiarTexto()">
+          <span class="material-symbols-outlined">
+            content_copy
+          </span>Copiar</button>
+      </div>
+      <p>Dica: Copie o nome do Hexagrama e cole no Google para ler sobre ele.</p>
+      <div class="actions">
+        <button onclick="mostrarResultado()">Mostrar Resultado</button>
+        <button onclick="refreshPage()">Recomeçar</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>
