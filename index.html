@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,6 +19,7 @@
       <h1>iChing</h1>
       <h2>經</h2>
     </div>
+    <audio controls="controls" src="./src/magic-ambiance.mp3" preload="auto" autoplay="autoplay" loop="loop"></audio>
     <nav>
       <ul>
         <a href="./index.html">
@@ -57,7 +59,7 @@
         <p>Para saber mais, acesse a sessão "sobre" no menu de navegação.</p>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="container">
       <h3>Tire suas moedas</h3>
       <div class="text-box">
         <ul class="roll" id="box">
@@ -66,16 +68,17 @@
           <li id="roll-item"><img src="./img/cara.png" class="moedas" id="mm-3" /><span id="m-tres"></span></li>
         </ul>
         <h4 id="linha"></h4>
+        <div class="actions">
+          <button onclick="jogar()">Jogar</button>
+          <button onclick="recolher()">Recolher</button>
+        </div>
         <p>Mantenha em mente o assunto para o qual deseja obter orientação.
           A primeira jogada revela a linha inferior do hexagrama; a segunda
           jogada indica a segunda linha de baixo para cima e, assim por diante, até a sexta e última jogada, que indica
           a última linha superior.</p>
       </div>
       <p>Dica: Tire print ou anote as linhas de valor 6 e 9.</p>
-      <div class="actions">
-        <button onclick="jogar()">Jogar</button>
-        <button onclick="recolher()">Recolher</button>
-      </div>
+
     </div>
     <div class="container">
       <h3>Resultado</h3>
