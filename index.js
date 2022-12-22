@@ -350,50 +350,50 @@ function adicionaLinha() {
             linha.textContent = `Linha ${codes.length + 1} - Valor 9`;
             codes[i] = 'Yang';
         }
-        
+
         else if (
             linhas[i].um === 'Yin' && linhas[i].dois === 'Yin' && linhas[i].tres === 'Yin') {
-                linha.textContent = `Linha ${codes.length + 1} - Valor 6`;
-                codes[i] = 'Yin';
-            }
-            else if (
-                //poderia usar um array.some() no codigo abaixo?
-                linhas[i].um === 'Yin' && linhas[i].dois === 'Yin') {
-                    linha.textContent = `Linha ${codes.length + 1} - Valor 7`;
-                    codes[i] = 'Yang';
-                    
-                }
-                else if (
-                    linhas[i].um === 'Yin' && linhas[i].tres === 'Yin') {
-                linha.textContent = `Linha ${codes.length + 1} - Valor 7`;
-                codes[i] = 'Yang';
-                
-            }
-            else if (
-                linhas[i].dois === 'Yin' && linhas[i].tres === 'Yin') {
-                linha.textContent = `Linha ${codes.length + 1} - Valor 7`;
-                codes[i] = 'Yang';
-                
-            }
-            else if (
-                linhas[i].um === 'Yang' && linhas[i].dois === 'Yang') {
-                linha.textContent = `Linha ${codes.length + 1} - Valor 8`;
-                codes[i] = 'Yin';
-                
-            }
-            else if (
-                linhas[i].um === 'Yang' && linhas[i].tres === 'Yang') {
-                linha.textContent = `Linha ${codes.length + 1} - Valor 8`;
-                codes[i] = 'Yin';
-                
-            }
-            else if (
-                linhas[i].dois === 'Yang' && linhas[i].tres === 'Yang') {
-                linha.textContent = `Linha ${codes.length + 1} - Valor 8`;
+            linha.textContent = `Linha ${codes.length + 1} - Valor 6`;
+            codes[i] = 'Yin';
+        }
+        else if (
+            //poderia usar um array.some() no codigo abaixo?
+            linhas[i].um === 'Yin' && linhas[i].dois === 'Yin') {
+            linha.textContent = `Linha ${codes.length + 1} - Valor 7`;
+            codes[i] = 'Yang';
+
+        }
+        else if (
+            linhas[i].um === 'Yin' && linhas[i].tres === 'Yin') {
+            linha.textContent = `Linha ${codes.length + 1} - Valor 7`;
+            codes[i] = 'Yang';
+
+        }
+        else if (
+            linhas[i].dois === 'Yin' && linhas[i].tres === 'Yin') {
+            linha.textContent = `Linha ${codes.length + 1} - Valor 7`;
+            codes[i] = 'Yang';
+
+        }
+        else if (
+            linhas[i].um === 'Yang' && linhas[i].dois === 'Yang') {
+            linha.textContent = `Linha ${codes.length + 1} - Valor 8`;
             codes[i] = 'Yin';
 
         }
-        if (linhas.length == 6){
+        else if (
+            linhas[i].um === 'Yang' && linhas[i].tres === 'Yang') {
+            linha.textContent = `Linha ${codes.length + 1} - Valor 8`;
+            codes[i] = 'Yin';
+
+        }
+        else if (
+            linhas[i].dois === 'Yang' && linhas[i].tres === 'Yang') {
+            linha.textContent = `Linha ${codes.length + 1} - Valor 8`;
+            codes[i] = 'Yin';
+
+        }
+        if (linhas.length == 6) {
             linha.textContent = `${linha.textContent} (Confira o resultado)`
         }
         else
@@ -435,9 +435,10 @@ function recolher() {
 function mostrarResultado() {
     const filtro = codes.toString();
     const filtroPesquisa = hexagramaDescriptions.filter(v => v.code === filtro)
-    if (linhas.length == 6){
-    pesquisar.textContent = `Hexagrama ${filtroPesquisa[0].position} - ${filtroPesquisa[0].name}`;
-    copiar.classList.add('active');}
+    if (linhas.length == 6) {
+        pesquisar.textContent = `Hexagrama ${filtroPesquisa[0].position} - ${filtroPesquisa[0].name}`;
+        copiar.classList.add('active');
+    }
 
 }
 function copiarTexto() {

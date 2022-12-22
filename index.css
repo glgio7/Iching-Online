@@ -19,6 +19,16 @@ a:visited {
 a:hover {
     opacity: .9;
 }
+::-webkit-scrollbar{
+    border-radius: 10px 0 0 10px;
+    background: #202020;
+    width: thin;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #111;
+    background-clip: content-box;
+}
 
 body {
     overflow-x: hidden;
@@ -86,7 +96,11 @@ p {
     text-align: center;
 }
 #linha {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    line-height: 2rem;
     font-weight: bold;
+    border-radius: 6px;
 }
 
 nav {
