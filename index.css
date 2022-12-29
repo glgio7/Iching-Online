@@ -4,18 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
 }
 
 
-::-webkit-scrollbar{
-    border-radius: 10px 0 0 10px;
-    background: #202020;
-    width: 10px;
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #000;
-}
+
 
 body {
     overflow-x: hidden;
@@ -27,7 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Ubuntu';
 }
 
 header {
@@ -82,8 +74,13 @@ h4 {
 
 p {
     line-height: 2rem;
+    margin-block: 6px;
+    padding: 0 .5rem;
+    border-radius: 10px;
+    width: 100%;
     color: #fff;
     text-align: center;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 span {
@@ -145,7 +142,7 @@ audio{
     width: 30vw;
     height: 80vh;
     border-radius: 10px;
-    background-color: #303030;
+    background-color: #101010;
     margin: 1rem 0;
     padding: 1rem;
 }
@@ -161,9 +158,18 @@ audio{
     overflow-x: hidden;
     height: 100%;
     border-radius: 10px;
-    background-color: #303030;
+    background-color: #101010;
+    
 }
-
+.text-box::-webkit-scrollbar{
+    border-radius: 10px 0 0 10px;
+    background: #202020;
+    width: 10px;
+}
+.text-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #000;
+}
 .roll {
     display: flex;
     text-align: center;
@@ -185,6 +191,16 @@ audio{
     display: inline-block;
     margin-inline: 6px;
 }
+
+#resultbox{
+    background-image: url('./img/unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#result{
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+}
 #linha {
     background-color: rgba(0, 0, 0, .5);
     width: 100%;
@@ -199,12 +215,10 @@ audio{
     pointer-events: all;
 }
 
-
-
 .actions {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 button {
@@ -213,9 +227,8 @@ button {
     font-weight: bold;
     border-radius: 6px;
     border: none;
-    width: 80%;
+    width: 45%;
     height: 2rem;
-    margin: .5rem;
     display: block;
     background-color: #ffa900;
     transition: all ease 250ms;
@@ -286,19 +299,18 @@ button:hover {
         width: 90vw;
         height: max-content;
     }
+    #result{
+        padding: 2rem;
+    }
     .roll{
         min-height: 240px;
         max-width: 100%;
     }
-    .actions{
-        justify-content: space-around;
-    }
     
 
     button {
-        width: 8rem;
+        width: 45%;
         height: 4rem;
-        margin: .25rem;
     }
 
 }
