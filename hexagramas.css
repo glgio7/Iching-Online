@@ -2,6 +2,7 @@
 .hexagrama {
     width: 96px;
     height: 96px;
+    border: 2px rgb(255, 220, 0) outset;
     border-radius: 50%;
   }
   
