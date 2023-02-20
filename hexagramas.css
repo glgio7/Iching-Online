@@ -2,13 +2,16 @@
 .hexagrama {
     width: 96px;
     height: 96px;
+    
     border: 2px rgb(255, 220, 0) outset;
     border-radius: 50%;
   }
   
   #container-hexagrama{
     background-color: rgba(0, 0, 0, .5);
+    
     padding: 2rem;
+    
     width: 80vw;
     height: 100%;
   }
