@@ -11,6 +11,12 @@ export const Home = styled.main`
 
 	background-image: url("img/container-background.jpg");
 	background-size: cover;
+
+	@media screen and (max-width: 900px) {
+		padding: 1rem;
+
+		flex-direction: column;
+	}
 `;
 
 export const Container = styled.section`
@@ -19,6 +25,13 @@ export const Container = styled.section`
 
 	position: relative;
 	z-index: 5;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 1rem;
 
 	background-color: #303030;
 
@@ -44,5 +57,26 @@ export const Container = styled.section`
 	h3 {
 		font-size: 1.25rem;
 		font-weight: bold;
+		text-align: center;
+
+		width: 100%;
+		line-height: 3rem;
+
+		border-radius: 12px;
+
+		color: #fff;
+		background-color: #101010;
+	}
+
+	.interact-container {
+		display: flex;
+		justify-content: space-between;
+
+		width: 100%;
+	}
+
+	@media screen and (max-width: 900px) {
+		width: 100%;
+		margin-bottom: 2rem;
 	}
 `;

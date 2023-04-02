@@ -1,15 +1,20 @@
 import React from "react";
-import Header from "./components/Header/index";
-import Home from "./pages";
 import GlobalCSS from "./styles/global";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/index";
+import Navbar from "./components/Navbar";
+import Home from "./pages";
 
 function App() {
 	return (
-		<>
+		<BrowserRouter>
 			<GlobalCSS />
 			<Header />
-			<Home />
-		</>
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
