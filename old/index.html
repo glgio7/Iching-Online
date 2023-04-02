@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Nunito:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <title>iChing Online</title>
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1>
+        <span>
+          iChing
+        </span>
+        <img class="logo" src="./img/iching-logo.png" alt="Iching Logo" />
+      </h1>
+    </a>
+  </header>
+  <nav>
+    <ul>
+      <a href="./index.html">
+        <li>Início</li>
+      </a>
+      <a href="./hexagramas.html">
+        <li>Hexagramas</li>
+      </a><a href="https://encurtador.com.br/ehnJU" target="_blank">
+        <li>Leitura</li>
+      </a>
+      <a href="./tutorial.html">
+        <li>Tutorial</li>
+      </a>
+    </ul>
+  </nav>
+  <div class="master-container">
+    <div class="container" id="container">
+      <h3>Tire suas moedas</h3>
+      <div class="text-box">
+        <ul class="roll" id="box">
+          <li id="roll-item"><img src="./img/cara.png" class="moedas" id="mm-1" /><span id="m-um"></span></li>
+          <li id="roll-item"><img src="./img/cara.png" class="moedas" id="mm-2" /><span id="m-dois"></span></li>
+          <li id="roll-item"><img src="./img/cara.png" class="moedas" id="mm-3" /><span id="m-tres"></span></li>
+        </ul>
+        <h4 id="linha"></h4>
+        <div class="actions">
+          <button onclick="jogar()">Jogar</button>
+          <button onclick="recolher()">Recolher</button>
+        </div>
+        <p>Mantenha em mente o assunto para o qual deseja obter orientação.
+          A primeira jogada revela a linha inferior do hexagrama; a segunda
+          jogada indica a segunda linha de baixo para cima e, assim por diante, até a sexta e última jogada, que indica
+          a última linha superior.</p>
+        <p>Dica: Tire print ou anote as linhas de valor 6 e 9.</p>
+      </div>
+    </div>
+    <div class="container" id="resultbox">
+      <h3>Resultado</h3>
+      <div class="text-box" id="result">
+        <h4>Hexagrama</h4>
+        <h3 id="pesquisar"></h3>
+        <button class="copiar" id="copiar" onclick="copiarTexto()">
+          <span class="material-symbols-outlined">
+            content_copy
+          </span>Copiar</button>
+      </div>
+      <p>Dica: Copie o nome do Hexagrama e cole no Google para ler sobre ele.</p>
+      <div class="actions">
+        <button onclick="mostrarResultado()">Mostrar Resultado</button>
+        <button onclick="refreshPage()">Recomeçar</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>

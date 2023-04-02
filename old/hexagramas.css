@@ -1,0 +1,29 @@
+.hexagrama {
+  width: 96px;
+  height: 96px;
+
+  border: 2px rgb(255, 220, 0) outset;
+  border-radius: 50%;
+}
+
+#container-hexagrama {
+  background-color: rgba(0, 0, 0, .5);
+
+  padding: 2rem;
+
+  width: 80vw;
+  height: 100%;
+}
+
+#container-hexagrama p {
+  padding: 2rem;
+  margin-block: .5rem;
+
+  border-radius: 10px;
+
+  background-color: rgba(0, 0, 0, .75);
+}
+
+#container-texto {
+  background-color: transparent;
+}
