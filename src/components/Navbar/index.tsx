@@ -9,14 +9,14 @@ const Navbar = () => {
 				<Link to={"/"}>
 					<li>Início</li>
 				</Link>
-				<Link to={"/"}>
+				<Link to={"/tutorial"}>
+					<li>Tutorial</li>
+				</Link>
+				<Link to={"/hexagramas"}>
 					<li>Hexagramas</li>
 				</Link>
-				<Link to={"https://encurtador.com.br/ehnJU"} target="_blank">
+				<Link to={"https://encurtador.com.br/hERVZ"} target="_blank">
 					<li>Leitura</li>
-				</Link>
-				<Link to={"/"}>
-					<li>Tutorial</li>
 				</Link>
 			</ul>
 		</S.Nav>

@@ -34,7 +34,7 @@ export const Container = styled.section`
 	padding: 1rem;
 
 	color: #fff;
-	background-color: #303030;
+	background-color: #101010;
 
 	border-radius: 12px;
 
@@ -55,7 +55,8 @@ export const Container = styled.section`
 		z-index: -1;
 	}
 
-	h3 {
+	h3,
+	h4 {
 		font-size: 1.25rem;
 		font-weight: bold;
 		text-align: center;
@@ -68,6 +69,12 @@ export const Container = styled.section`
 		background-color: #101010;
 	}
 
+	h4 {
+		background-color: transparent;
+		font-size: 1rem;
+		color: rgba(255, 169, 0, 1);
+	}
+
 	.interact-container {
 		display: flex;
 		justify-content: space-between;
@@ -75,15 +82,16 @@ export const Container = styled.section`
 		width: 100%;
 	}
 
-	.token-btn {
+	.main-btn {
 		width: 100%;
 	}
 
 	.text-container {
 		width: 100%;
 	}
-	.text-container p {
+	p {
 		padding: 6px;
+		width: 100%;
 		margin-block: 6px;
 
 		border-radius: 6px;
@@ -93,8 +101,25 @@ export const Container = styled.section`
 		text-align: center;
 	}
 
+	.coin.active {
+		animation: rotate 500ms linear;
+		animation-delay: 0.1s;
+	}
+
+	@keyframes rotate {
+		to {
+			transform: rotateY(1600deg);
+		}
+	}
+
+	a {
+		color: rgba(255, 169, 0, 1);
+	}
+
 	@media screen and (max-width: 900px) {
 		width: 100%;
+		min-height: 50vh;
+		height: auto;
 		margin-bottom: 2rem;
 	}
 `;

@@ -7,10 +7,12 @@ export const HeaderContainer = styled.header`
 	position: sticky;
 	top: 0;
 
+	z-index: 99;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #121212;
+	background-color: #080808;
 
 	.logo-container {
 		display: flex;

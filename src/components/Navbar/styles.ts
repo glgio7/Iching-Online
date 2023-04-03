@@ -22,7 +22,14 @@ export const Nav = styled.nav`
 		transition: all ease 250ms;
 		color: #fff;
 		&:hover {
-			opacity: 0.8;
+			color: rgba(255, 169, 0, 1);
+			opacity: 0.75;
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		li {
+			font-size: 0.8rem;
 		}
 	}
 `;
