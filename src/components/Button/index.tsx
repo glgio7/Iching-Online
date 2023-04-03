@@ -2,9 +2,11 @@ import React from "react";
 import * as S from "./styles";
 import { ButtonProps } from "./types";
 
-const Button = ({ children, className }: ButtonProps) => {
+const Button = ({ children, className, onClick }: ButtonProps) => {
 	return (
-		<S.ButtonContainer className={className}>{children}</S.ButtonContainer>
+		<S.ButtonContainer onClick={onClick} className={className}>
+			{children}
+		</S.ButtonContainer>
 	);
 };
 

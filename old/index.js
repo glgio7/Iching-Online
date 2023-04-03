@@ -384,7 +384,7 @@ function adicionaLinha() {
 
 function jogar() {
 	if (
-		itemUm.textContent == "" &&
+		itemUm.textContent == "" && // ITEM REFERE-SE AO SPAN DO TOKEN
 		itemDois.textContent == "" &&
 		itemTres.textContent == "" &&
 		linhas.length < 6
@@ -392,6 +392,7 @@ function jogar() {
 		let num1 = gerador();
 		let num2 = gerador();
 		let num3 = gerador();
+
 		box.classList.toggle("active");
 		moedaUm.classList.toggle("active");
 		moedaDois.classList.toggle("active");

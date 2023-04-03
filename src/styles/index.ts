@@ -67,22 +67,15 @@ export const Container = styled.section`
 
 		background-color: #101010;
 	}
-	.main-container {
-		height: 100%;
-		width: 100%;
-
-		padding: 6px;
-		margin-block: 6px;
-
-		border-radius: 6px;
-
-		background-color: rgba(0, 0, 0, 0.75);
-	}
 
 	.interact-container {
 		display: flex;
 		justify-content: space-between;
 
+		width: 100%;
+	}
+
+	.token-btn {
 		width: 100%;
 	}
 
@@ -103,5 +96,35 @@ export const Container = styled.section`
 	@media screen and (max-width: 900px) {
 		width: 100%;
 		margin-bottom: 2rem;
+	}
+`;
+
+export const MainContainer = styled.ul<{ active: boolean }>`
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	padding: 6px;
+	margin-block: 6px;
+
+	border-radius: 6px;
+
+	background-color: rgba(0, 0, 0, 0.75);
+
+	li,
+	h4 {
+		width: 20%;
+		text-align: center;
+
+		opacity: ${({ active }) => (active ? "1" : "0")};
+
+		transition: all 500ms;
+	}
+	h4 {
+		width: 100%;
 	}
 `;
