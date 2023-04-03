@@ -7,9 +7,9 @@ import tails from "../../assets/tails.png";
 import heads from "../../assets/heads.png";
 import { Link } from "react-router-dom";
 
-const tokenGenerator = () => Math.floor((Math.random() * 10) / 6);
+const tokenGenerator = (): number => Math.floor((Math.random() * 10) / 6);
 
-const copyResult = () => {
+const copyResult = (): void => {
 	if (navigator.clipboard) {
 		navigator.clipboard.writeText(window.location.href);
 		window.alert(
@@ -17,9 +17,10 @@ const copyResult = () => {
 		);
 	}
 };
+
 let lineValue: number;
 
-const Home = () => {
+const Home = (): React.ReactNode => {
 	document.title = "Iching by GLGIO7 | Home";
 
 	const [hasTokens, setHasTokens] = useState<boolean>(false);
@@ -28,16 +29,15 @@ const Home = () => {
 
 	const [lines, setLines] = useState<string[]>([]);
 
-	const result =
+	const result: string =
 		hexagramsDB.find((item) => item.code === lines.toString())?.name ?? "";
 
-	const search = hexagramsDB.find(
-		(item) => item.code === lines.toString()
-	)?.position;
+	const search: string =
+		hexagramsDB.find((item) => item.code === lines.toString())?.position ?? "0";
 
 	const [tokens, setTokens] = useState<ITokens>({} as ITokens);
 
-	const getTokens = () => {
+	const getTokens = (): void => {
 		const currentLine = [
 			tokenGenerator() % 2 === 0 ? "Yang" : "Yin",
 			tokenGenerator() % 2 === 0 ? "Yang" : "Yin",

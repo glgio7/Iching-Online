@@ -2,7 +2,11 @@ import React from "react";
 import * as S from "./styles";
 import { ButtonProps } from "./types";
 
-const Button = ({ children, className, onClick }: ButtonProps) => {
+const Button = ({
+	children,
+	className,
+	onClick,
+}: ButtonProps): React.ReactElement => {
 	return (
 		<S.ButtonContainer onClick={onClick} className={className}>
 			{children}

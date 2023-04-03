@@ -4,7 +4,7 @@ import imageLogo from "../../assets/logo-image.png";
 import textLogo from "../../assets/logo-text.png";
 import * as S from "./styles";
 
-const Header = () => {
+const Header = (): React.ReactNode => {
 	return (
 		<S.HeaderContainer>
 			<Link to={"/"}>

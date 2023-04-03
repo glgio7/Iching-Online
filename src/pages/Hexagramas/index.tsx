@@ -1,7 +1,7 @@
 import * as S from "./styles";
 import React from "react";
 
-const Hexagramas = () => {
+const Hexagramas = (): React.ReactNode => {
 	document.title = "Iching by GLGIO7 | Hexagramas";
 
 	return (

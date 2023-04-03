@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./styles";
 
-const Navbar = () => {
+const Navbar = (): React.ReactNode => {
 	return (
 		<S.Nav>
 			<ul>

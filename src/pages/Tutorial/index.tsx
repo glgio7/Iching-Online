@@ -1,7 +1,7 @@
 import * as S from "./styles";
 import React from "react";
 
-const Tutorial = () => {
+const Tutorial = (): React.ReactNode => {
 	document.title = "Iching by GLGIO7 | Tutorial";
 
 	return (
