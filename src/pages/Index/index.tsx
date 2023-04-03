@@ -28,15 +28,12 @@ const Home = () => {
 
 	const [lines, setLines] = useState<string[]>([]);
 
-	const result = hexagramsDB
-		.filter((item) => item.code === lines.toString())
-		.map((item) => item.name)
-		.join();
+	const result =
+		hexagramsDB.find((item) => item.code === lines.toString())?.name ?? "";
 
-	const search = hexagramsDB
-		.filter((item) => item.code === lines.toString())
-		.map((item) => item.position)
-		.join();
+	const search = hexagramsDB.find(
+		(item) => item.code === lines.toString()
+	)?.position;
 
 	const [tokens, setTokens] = useState<ITokens>({} as ITokens);
 
