@@ -33,6 +33,7 @@ export const Container = styled.section`
 
 	padding: 1rem;
 
+	color: #fff;
 	background-color: #303030;
 
 	border-radius: 12px;
@@ -64,8 +65,18 @@ export const Container = styled.section`
 
 		border-radius: 12px;
 
-		color: #fff;
 		background-color: #101010;
+	}
+	.main-container {
+		height: 100%;
+		width: 100%;
+
+		padding: 6px;
+		margin-block: 6px;
+
+		border-radius: 6px;
+
+		background-color: rgba(0, 0, 0, 0.75);
 	}
 
 	.interact-container {
@@ -73,6 +84,20 @@ export const Container = styled.section`
 		justify-content: space-between;
 
 		width: 100%;
+	}
+
+	.text-container {
+		width: 100%;
+	}
+	.text-container p {
+		padding: 6px;
+		margin-block: 6px;
+
+		border-radius: 6px;
+
+		background-color: rgba(0, 0, 0, 0.75);
+
+		text-align: center;
 	}
 
 	@media screen and (max-width: 900px) {
