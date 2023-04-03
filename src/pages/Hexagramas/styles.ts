@@ -47,17 +47,18 @@ export const Container = styled.section`
 
 		background-image: url("img/background.jpg");
 		background-size: cover;
+		background-position: center;
 
 		opacity: 0.5;
 
 		z-index: -1;
 	}
 
-	h3,
-	h4 {
+	h3 {
 		font-size: 1.25rem;
 		font-weight: bold;
 		text-align: center;
+		color: rgba(255, 169, 0, 1);
 
 		width: 100%;
 		line-height: 3rem;
@@ -69,51 +70,82 @@ export const Container = styled.section`
 		background-color: #101010;
 	}
 
-	h4 {
-		font-size: 1rem;
+	.hexagrams-list {
+		width: 100%;
+		min-height: 300px;
 
-		color: rgba(255, 169, 0, 1);
-	}
-
-	.interact-container {
 		display: flex;
 		justify-content: space-between;
-
-		width: 100%;
+		flex-wrap: wrap;
 	}
 
-	.main-btn {
-		width: 100%;
-	}
+	.hexagrams-list li {
+		width: 200px;
 
-	.text-container {
-		width: 100%;
-	}
-	p {
-		padding: 18px;
-		width: 100%;
+		border-radius: 12px;
+
+		position: relative;
+		z-index: 5;
+
 		margin-block: 6px;
 
-		border-radius: 6px;
+		background-position: center;
+		background-image: url("img/card-cover.jpg");
+		background-size: cover;
 
-		background-color: rgba(0, 0, 0, 0.75);
+		aspect-ratio: 9/16;
 
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.hexagrams-list li h4,
+	.search-link {
 		text-align: center;
+		background-color: #080808;
+
+		border-radius: 12px 12px 0 0;
+
+		padding: 0.5rem;
+
+		width: 100%;
+
+		line-height: 1.25rem;
+		font-size: 1rem;
 	}
 
-	.coin.active {
-		animation: rotate 500ms linear;
-		animation-delay: 0.1s;
-	}
+	.search-link {
+		border-radius: 0 0 12px 12px;
 
-	@keyframes rotate {
-		to {
-			transform: rotateY(1600deg);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		color: rgba(255, 169, 0, 1);
+
+		transition: all 400ms;
+
+		&hover {
+			opacity: 0.75;
 		}
 	}
 
 	@media screen and (max-width: 900px) {
 		width: 100%;
-		margin-bottom: 2rem;
+
+		.hexagrams-list li {
+			width: 48%;
+
+			background-size: contain;
+		}
+	}
+	.hexagrams-list li h4,
+	.search-link {
+		font-size: 0.8rem;
+		line-height: 1rem;
+
+		height: 4rem;
 	}
 `;

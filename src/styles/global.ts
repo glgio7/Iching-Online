@@ -14,6 +14,7 @@ const GlobalCSS = createGlobalStyle`
   text-decoration: none;
   font-family: "Nunito", sans-serif;
 
+outline: none;
 }
 
 img{
